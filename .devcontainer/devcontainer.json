@@ -1,0 +1,16 @@
+{
+    "name": "IB9JHO Container",
+    "image": "mcr.microsoft.com/devcontainers/cpp",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cpptools",
+                "ms-vscode.cpptools-extension-pack",
+                "ms-vscode.cmake-tools",
+                "twxs.cmake",
+                "github.vscode-github-actions",
+                "matepek.vscode-catch2-test-adapter"
+            ]
+        }
+    }
+}

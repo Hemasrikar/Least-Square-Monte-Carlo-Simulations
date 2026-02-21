@@ -1,0 +1,6 @@
+build/
+output/
+.vscode/settings.json
+tests/IO/*
+!tests/IO/*output*
+!tests/IO/*input*

@@ -1,0 +1,11 @@
+{
+    "tests": [
+        {
+            "name": "Check All Tests Passed",
+            "setup": "bash ./.github/workflows/build_and_test.sh",
+            "run": "grep 'All tests passed' build/Testing/Temporary/LastTest.log && exit 0 || exit 1",
+            "timeout": 1,
+            "points": 1
+        }
+    ]
+}
