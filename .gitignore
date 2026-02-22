@@ -4,3 +4,4 @@ output/
 tests/IO/*
 !tests/IO/*output*
 !tests/IO/*input*
+.DS_Store
