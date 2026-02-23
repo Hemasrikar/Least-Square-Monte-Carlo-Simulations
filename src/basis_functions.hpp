@@ -86,4 +86,25 @@ private:
     int order_;
 };
 
+//  MonomialBasis  —  simple power basis x^power
+
+class MonomialBasis : public BasisFunction {
+public:
+    explicit MonomialBasis(int power) : power_(power) {
+        if (power < 0)
+            throw std::invalid_argument("MonomialBasis: power must be >= 0");
+    }
+
+    double evaluate(double x) const override {
+        return std::pow(x, static_cast<double>(power_));
+    }
+
+    std::string name() const override {
+        return "Monomial_x^" + std::to_string(power_);
+    }
+
+private:
+    int power_;
+};
+
 }
