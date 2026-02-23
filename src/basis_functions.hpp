@@ -56,4 +56,34 @@ private:
     int order_;
 };
 
+
+//  HermitePolynomial  —  probabilist's Hermite basis He_n(x)
+
+class HermitePolynomial : public BasisFunction {
+public:
+    explicit HermitePolynomial(int order) : order_(order) {
+        if (order < 0 || order > 5)
+            throw std::invalid_argument("HermitePolynomial: order must be 0–5");
+    }
+
+    double evaluate(double x) const override {
+        switch (order_) {
+            case 0: return 1.0;
+            case 1: return x;
+            case 2: return x*x - 1.0;
+            case 3: return x*x*x - 3.0*x;
+            case 4: return x*x*x*x - 6.0*x*x + 3.0;
+            case 5: return x*x*x*x*x - 10.0*x*x*x + 15.0*x;
+            default: return 0.0;
+        }
+    }
+
+    std::string name() const override {
+        return "Hermite_He" + std::to_string(order_);
+    }
+
+private:
+    int order_;
+};
+
 }
