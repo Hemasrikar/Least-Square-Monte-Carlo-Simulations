@@ -13,7 +13,7 @@ set(SRC_FILES
     ${CMAKE_SOURCE_DIR}/src/basis_functions.cpp
     ${CMAKE_SOURCE_DIR}/src/ols_regressor.cpp
     ${CMAKE_SOURCE_DIR}/src/lsm_pricer.cpp
-    ${CMAKE_SOURCE_DIR}/src/convergence_analyzer.cpp
+    ${CMAKE_SOURCE_DIR}/src/convergence_analyser.cpp
 )
 
 add_executable(my_program ${SRC_FILES} ${CMAKE_SOURCE_DIR}/src/main.cpp)
